@@ -1,0 +1,20 @@
+Why are we requiring RecyclerListView?
+-This is a high performance listview for React Native
+ and Web with support for complex layouts.Loads content as window scrolled,
+No frame drops, Highly Performant,Scroll is preserved if data refreshed.
+Hence we are using RecyclerListView.
+
+What is the benefit of RLV vs ScrollView?
+-Scroll View loads all the data in memory. 
+Whereas, RLV only loads data currently in the viewport.
+This solves memory problems when rendering large lists.
+There is observable frame drops and trouble refreshing data in ScrollView
+which is solved in RLV.
+
+What is the benefit of RLV vs FlatList?
+- Flat List is the same as Recycler List View when it comes to loading 
+only the data currently in the viewport. But the Flat List 
+regularly destroys and creates new Views which decreases the performance. 
+RLV solves this problem by "recycling" the views and increases the performance.
+Scroll position is not preserved if data refreshed and there is observable frame 
+drops for large data sets (> 1500).
